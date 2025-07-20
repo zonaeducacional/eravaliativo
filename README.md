@@ -33,4 +33,4 @@ Clone ou baixe este repositório.
 
 Abra o arquivo index.html em qualquer navegador moderno. (A funcionalidade de salvar e ver a tabela de pontuações só funcionará se configurada com credenciais do Firebase).
 
-Este projeto foi criado por Sérgio (seu nome/usuário) em colaboração com a IA Gemini.
+Este projeto foi criado por Sérgio em colaboração com a IA Gemini.

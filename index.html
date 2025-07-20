@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room: Da Idade Média à Moderna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-medieval {
+            font-family: 'MedievalSharp', cursive;
+        }
+        .fade-in {
+            animation: fadeInAnimation 0.5s ease-in forwards;
+        }
+        @keyframes fadeInAnimation {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Estilo para a tabela de resultados */
+        .results-table th, .results-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #4a5568;
+        }
+        .results-table th {
+            background-color: #2d3748;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .results-table tr:nth-child(even) {
+            background-color: #232c3b;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <!-- Seção 1: Texto de Estudo -->
+        <header class="text-center mb-12">
+            <h1 class="font-medieval text-4xl md:text-5xl text-amber-300 mb-2">A Grande Transição</h1>
+            <p class="text-xl text-gray-400">Do Feudalismo ao Capitalismo e a Luz do Renascimento</p>
+        </header>
+
+        <article id="texto-estudo" class="prose prose-invert lg:prose-xl max-w-none bg-gray-800 p-6 rounded-lg shadow-lg mb-12">
+            <h2>Material de Estudo: A Chave para sua Fuga</h2>
+            <p>Para escapar dos labirintos do tempo, você precisa entender a época que está deixando para trás e aquela que surge no horizonte. Leia com atenção, pois cada parágrafo pode ser uma pista! As palavras em <strong>negrito</strong> estão explicadas no vocabulário abaixo.</p>
+            
+            <h3>1. O Fim da Idade Média e a Crise do Feudalismo</h3>
+            <p>O Feudalismo, sistema que marcou a Idade Média, era baseado na terra (o <strong>feudo</strong>) e em relações de <strong>servidão</strong>. O poder era descentralizado, nas mãos dos senhores feudais. No entanto, a partir do século XI, esse sistema começou a entrar em crise por vários motivos. As Cruzadas, expedições militares e religiosas, reabriram antigas rotas comerciais com o Oriente, estimulando o comércio. Cidades, chamadas de <strong>burgos</strong>, começaram a crescer e se tornaram centros de comércio e artesanato. Além disso, uma terrível epidemia, a Peste Negra, dizimou quase metade da população europeia no século XIV. Isso desorganizou a produção nos feudos, levou a revoltas camponesas e enfraqueceu o poder da nobreza, que via sua fonte de riqueza e poder diminuir.</p>
+
+            <h3>2. A Ascensão da Burguesia: Uma Nova Força Social</h3>
+            <p>Nos <strong>burgos</strong>, surgiu uma nova classe social: a <strong>burguesia</strong>. Formada por comerciantes, banqueiros e artesãos, a burguesia enriquecia através do comércio e das finanças, e não pela posse de terras. Eles valorizavam o lucro, a acumulação de riquezas e a liberdade econômica, ideias que se chocavam com a estrutura rígida e agrária do feudalismo. Para a burguesia, as diferentes moedas, os pedágios e a falta de segurança impostas pelos senhores feudais eram grandes obstáculos para seus negócios.</p>
+
+            <h3>3. O Estado Moderno e o Mercantilismo</h3>
+            <p>Buscando superar esses obstáculos, a <strong>burguesia</strong> encontrou um aliado poderoso: o Rei. Ao financiar os monarcas com empréstimos, a burguesia ajudou a centralizar o poder, formando os Estados Nacionais Modernos (como Portugal, Espanha, França e Inglaterra). Com um poder centralizado (<strong>Absolutismo</strong>), o Rei unificou moedas, leis, impostos e exércitos, garantindo a segurança para o comércio florescer em todo o reino. Essa aliança deu origem a uma nova política econômica chamada <strong>Mercantilismo</strong>, cujos princípios eram: acumular metais preciosos (metalismo), ter uma balança comercial favorável (exportar mais que importar) e explorar colônias através do <strong>pacto colonial</strong>.</p>
+
+            <h3>4. O Renascimento: A Revolução na Cultura e no Pensamento</h3>
+            <p>Toda essa transformação econômica e social veio acompanhada de uma revolução cultural: o <strong>Renascimento</strong>. Inspirado na cultura da Grécia e Roma antigas, o Renascimento trocou o <strong>Teocentrismo</strong> medieval (Deus no centro de tudo) pelo <strong>Antropocentrismo</strong> (o ser humano no centro). O Humanismo valorizava a razão, a observação e a capacidade humana. Artistas como Leonardo da Vinci e Michelangelo, muitas vezes financiados por burgueses ricos e pela Igreja (os <strong>mecenas</strong>), criaram obras que celebravam a beleza do corpo humano e do mundo natural, utilizando novas técnicas como a perspectiva. A invenção da prensa de tipos móveis por Gutenberg, por volta de 1450, permitiu que essas novas ideias se espalhassem mais rapidamente.</p>
+        </article>
+
+        <!-- Seção 2: Vocabulário -->
+        <section id="vocabulario" class="bg-gray-800 p-6 rounded-lg shadow-lg mb-12">
+            <h2 class="font-medieval text-3xl text-amber-300 mb-4">Vocabulário Essencial</h2>
+            <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Feudo:</dt>
+                    <dd>Grande propriedade de terra controlada por um senhor feudal, base da economia medieval.</dd>
+                </div>
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Servidão:</dt>
+                    <dd>Relação em que o camponês (servo) estava preso à terra e devia obrigações e impostos ao senhor feudal.</dd>
+                </div>
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Burgos:</dt>
+                    <dd>Cidades medievais que se tornaram centros de comércio e artesanato.</dd>
+                </div>
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Burguesia:</dt>
+                    <dd>Classe social que surgiu nos burgos, composta por comerciantes, banqueiros e artesãos.</dd>
+                </div>
+                 <div class="p-2">
+                    <dt class="font-bold text-amber-200">Absolutismo:</dt>
+                    <dd>Sistema político onde o poder se concentrava totalmente nas mãos do rei.</dd>
+                </div>
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Mercantilismo:</dt>
+                    <dd>Conjunto de práticas econômicas dos Estados Absolutistas, focado no acúmulo de riqueza.</dd>
+                </div>
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Pacto Colonial:</dt>
+                    <dd>Acordo (imposto) em que a colônia só podia fazer comércio com sua metrópole.</dd>
+                </div>
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Mecenas:</dt>
+                    <dd>Pessoa rica (burguês, nobre ou papa) que financiava e protegia artistas e cientistas.</dd>
+                </div>
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Teocentrismo:</dt>
+                    <dd>Visão de mundo medieval em que Deus é o centro de tudo e a explicação para tudo.</dd>
+                </div>
+                <div class="p-2">
+                    <dt class="font-bold text-amber-200">Antropocentrismo:</dt>
+                    <dd>Visão de mundo renascentista que coloca o ser humano no centro, valorizando sua razão e capacidade.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- Seção 3: Escape Room Interativo -->
+        <div id="escape-room" class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-2xl border-2 border-amber-400">
+            <!-- O conteúdo do jogo será renderizado aqui pelo JavaScript -->
+        </div>
+
+        <!-- Seção 4: Tabela de Resultados -->
+        <div id="resultados" class="mt-12 bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h2 class="font-medieval text-3xl text-amber-300 mb-4 text-center">Resultados da Turma</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full results-table">
+                    <thead>
+                        <tr>
+                            <th>Aluno(a)</th>
+                            <th>Pontuação Final</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-body">
+                        <!-- Os resultados serão inseridos aqui pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module">
+        // --- INICIALIZAÇÃO DO FIREBASE ---
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, onSnapshot, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+        // Configuração do Firebase (fornecida pelo ambiente)
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-escape-room';
+        
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        // Autenticação
+        try {
+            if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                await signInWithCustomToken(auth, __initial_auth_token);
+            } else {
+                await signInAnonymously(auth);
+            }
+        } catch (error) {
+            console.error("Erro na autenticação:", error);
+        }
+
+        // --- ESTRUTURA DE DADOS DO JOGO ---
+        const PONTOS_POR_ACERTO = 0.2;
+        const gameData = {
+            'start': {
+                title: "Escape da Idade Média!",
+                text: "Você é um viajante do tempo e sua máquina quebrou. Para consertá-la, você precisa provar que entende as transformações que moldaram o futuro. Use os textos de estudo e o vocabulário para encontrar as respostas. Cada acerto te aproxima da liberdade e vale 0.2 pontos.",
+                needsInput: true,
+                options: [ { text: "Começar a jornada!", next: 'q1' } ]
+            },
+            'q1': {
+                question: "Qual evento histórico reabriu as rotas comerciais com o Oriente, ajudando a enfraquecer o isolamento dos feudos?",
+                options: [
+                    { text: "As Guerras de Reconquista.", next: 'fail_generic', reason: 'As Guerras de Reconquista foram importantes, mas as Cruzadas tiveram um impacto mais direto no comércio com o Oriente.' },
+                    { text: "As Cruzadas.", next: 'q2', points: PONTOS_POR_ACERTO },
+                    { text: "A Peste Negra.", next: 'fail_generic', reason: 'A Peste Negra desorganizou a economia feudal, mas não reabriu rotas comerciais.' }
+                ]
+            },
+            'q2': {
+                question: "Nas cidades que cresciam, os 'burgos', uma nova classe social surgiu. Quem eram eles?",
+                options: [
+                    { text: "A burguesia (comerciantes, banqueiros).", next: 'q3', points: PONTOS_POR_ACERTO },
+                    { text: "A nobreza (senhores de terras).", next: 'fail_generic', reason: 'A nobreza era a classe dominante do feudalismo, não a nova classe dos burgos.' },
+                    { text: "Os servos (camponeses).", next: 'fail_generic', reason: 'Os servos estavam ligados à terra e formavam a base do sistema feudal.' }
+                ]
+            },
+            'q3': {
+                question: "A burguesia e os Reis fizeram uma aliança. O que a burguesia ganhava com isso?",
+                options: [
+                    { text: "Títulos de nobreza e terras.", next: 'fail_generic', reason: 'Embora alguns pudessem comprar títulos, o principal interesse da burguesia era econômico.' },
+                    { text: "Unificação de moedas, leis e segurança para o comércio.", next: 'q4', points: PONTOS_POR_ACERTO },
+                    { text: "O controle do exército para atacar feudos.", next: 'fail_generic', reason: 'O controle do exército era do Rei. A burguesia queria segurança para seus negócios, não atacar feudos.' }
+                ]
+            },
+            'q4': {
+                question: "Essa aliança Rei-Burguesia fortaleceu o poder real, levando a qual sistema político?",
+                options: [
+                    { text: "Democracia.", next: 'fail_generic', reason: 'A Democracia é um conceito que ganharia força muito mais tarde.' },
+                    { text: "República.", next: 'fail_generic', reason: 'As Repúblicas eram raras; o modelo dominante foi a monarquia fortalecida.' },
+                    { text: "Absolutismo.", next: 'q5', points: PONTOS_POR_ACERTO }
+                ]
+            },
+            'q5': {
+                question: "Os Estados Absolutistas adotaram o Mercantilismo. Qual era um de seus principais objetivos?",
+                options: [
+                    { text: "Acumular metais preciosos (ouro e prata).", next: 'q6', points: PONTOS_POR_ACERTO },
+                    { text: "Distribuir a riqueza igualmente entre a população.", next: 'fail_generic', reason: 'O Mercantilismo visava enriquecer o Estado e a burguesia, não distribuir a riqueza.' },
+                    { text: "Incentivar as importações para ter mais produtos.", next: 'fail_generic', reason: 'Pelo contrário, o Mercantilismo buscava exportar mais e importar menos (balança comercial favorável).' }
+                ]
+            },
+            'q6': {
+                question: "Junto com as mudanças econômicas, veio uma revolução cultural. Qual foi a principal mudança de mentalidade do Renascimento?",
+                options: [
+                    { text: "Do Teocentrismo para o Antropocentrismo.", next: 'q7', points: PONTOS_POR_ACERTO },
+                    { text: "Do Paganismo para o Cristianismo.", next: 'fail_generic', reason: 'Essa transição ocorreu séculos antes, com a ascensão da Igreja na Idade Média.' },
+                    { text: "Do Absolutismo para a Democracia.", next: 'fail_generic', reason: 'Essa é uma mudança política que ocorreria bem mais tarde.' }
+                ]
+            },
+            'q7': {
+                question: "O que significa o Antropocentrismo, a ideia central do Renascimento?",
+                options: [
+                    { text: "Que Deus não existia.", next: 'fail_generic', reason: 'O Renascimento não era ateu, mas passou a valorizar também a capacidade humana, não apenas a fé.' },
+                    { text: "Que o ser humano e sua capacidade de razão são o centro do conhecimento.", next: 'q8', points: PONTOS_POR_ACERTO },
+                    { text: "Que a natureza era mais importante que o homem.", next: 'fail_generic', reason: 'A natureza foi muito valorizada, mas como objeto de estudo e admiração pelo homem.' }
+                ]
+            },
+            'q8': {
+                question: "Quem eram os 'mecenas' no período do Renascimento?",
+                options: [
+                    { text: "Os próprios artistas, que se autofinanciavam.", next: 'fail_generic', reason: 'Os artistas dependiam de financiamento para produzir suas grandes obras.' },
+                    { text: "Burgueses ricos e membros da Igreja que financiavam a arte.", next: 'q9', points: PONTOS_POR_ACERTO },
+                    { text: "Soldados que protegiam as obras de arte.", next: 'fail_generic', reason: 'Essa era a função de guardas, não de mecenas.' }
+                ]
+            },
+             'q9': {
+                question: "Qual invenção foi fundamental para espalhar as ideias humanistas e renascentistas pela Europa?",
+                options: [
+                    { text: "A bússola.", next: 'fail_generic', reason: 'A bússola foi crucial para as navegações, mas não para espalhar ideias escritas.' },
+                    { text: "A prensa de tipos móveis de Gutenberg.", next: 'q10', points: PONTOS_POR_ACERTO },
+                    { text: "O telescópio.", next: 'fail_generic', reason: 'O telescópio revolucionou a astronomia, mas a prensa foi a chave para a disseminação de textos.' }
+                ]
+            },
+            'q10': {
+                question: "Por fim, qual era a base da relação de servidão no feudalismo?",
+                options: [
+                    { text: "O servo era um escravo e propriedade do senhor.", next: 'fail_generic', reason: 'Isso define a escravidão. O servo não era uma propriedade, mas estava preso à terra.' },
+                    { text: "O servo estava preso à terra e devia trabalho e impostos ao senhor.", next: 'victory', points: PONTOS_POR_ACERTO },
+                    { text: "O servo recebia um salário para trabalhar na terra.", next: 'fail_generic', reason: 'O trabalho assalariado é uma característica do capitalismo, não do feudalismo.' }
+                ]
+            },
+            'fail_generic': {
+                title: "Ops, caminho errado!",
+                isFailure: true,
+                options: [ { text: "Tentar novamente" } ]
+            },
+            'victory': {
+                title: "Parabéns, você escapou!",
+                isVictory: true,
+                options: [ { text: "Ver minha pontuação e jogar novamente", next: 'start' } ]
+            }
+        };
+
+        // --- MOTOR DO JOGO ---
+        const gameContainer = document.getElementById('escape-room');
+        let currentStepId = 'start';
+        let previousStepId = 'start';
+        let score = 0;
+        let studentName = '';
+
+        function renderStep() {
+            const stepData = gameData[currentStepId];
+            gameContainer.innerHTML = '';
+            
+            const contentWrapper = document.createElement('div');
+            contentWrapper.className = 'fade-in';
+
+            let htmlContent = `<h2 class="font-medieval text-3xl text-amber-300 mb-4 text-center">${stepData.title}</h2>`;
+
+            if (stepData.isFailure) {
+                htmlContent += `<p class="text-lg mb-6 text-center text-red-400">${gameData[previousStepId].options.find(opt => opt.next === 'fail_generic').reason}</p>`;
+            } else if (stepData.isVictory) {
+                const finalScore = score.toFixed(1);
+                htmlContent += `<p class="text-lg mb-6 text-center">Sua máquina do tempo está consertada! Você provou seu conhecimento.<br><br><strong class='text-2xl text-amber-300'>Sua pontuação final: ${finalScore} / 2.0</strong></p>`;
+                saveScore(studentName, finalScore);
+            } else {
+                 htmlContent += `<p class="text-lg mb-6 text-center">${stepData.question || stepData.text}</p>`;
+            }
+            
+            if (stepData.needsInput) {
+                htmlContent += `<input type="text" id="student-name" placeholder="Digite seu nome completo aqui" class="w-full md:w-3/4 bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 mb-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 block mx-auto">`;
+            }
+
+            htmlContent += '<div class="flex flex-col items-center space-y-4">';
+            stepData.options.forEach(option => {
+                htmlContent += `<button data-next="${option.next}" data-points="${option.points || 0}" class="w-full md:w-3/4 bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-4 rounded-lg shadow-md transition-transform transform hover:scale-105">${option.text}</button>`;
+            });
+            htmlContent += '</div>';
+
+            contentWrapper.innerHTML = htmlContent;
+            gameContainer.appendChild(contentWrapper);
+        }
+
+        gameContainer.addEventListener('click', function(e) {
+            if (e.target.tagName !== 'BUTTON') return;
+
+            const nextStep = e.target.dataset.next;
+            if (!nextStep) return;
+
+            if (currentStepId === 'start') {
+                const nameInput = document.getElementById('student-name');
+                if (!nameInput.value.trim()) {
+                    alert('Por favor, digite seu nome para começar!');
+                    return;
+                }
+                studentName = nameInput.value.trim();
+                score = 0; // Reseta o score para um novo jogo
+            }
+            
+            const points = parseFloat(e.target.dataset.points);
+            if (points > 0) {
+                score += points;
+            }
+
+            if(nextStep === 'fail_generic') {
+                previousStepId = currentStepId;
+            }
+            
+            if (stepData.isFailure) {
+                currentStepId = previousStepId;
+            } else {
+                currentStepId = nextStep;
+            }
+
+            renderStep();
+        });
+
+        // --- LÓGICA DO FIREBASE ---
+        async function saveScore(name, finalScore) {
+            if (!name || !auth.currentUser) {
+                console.log("Nome ou usuário não autenticado. Não salvando.");
+                return;
+            }
+            try {
+                const scoresCollection = collection(db, `artifacts/${appId}/public/data/escape_room_scores`);
+                await addDoc(scoresCollection, {
+                    studentName: name,
+                    score: parseFloat(finalScore),
+                    timestamp: new Date()
+                });
+                console.log("Pontuação salva com sucesso!");
+            } catch (error) {
+                console.error("Erro ao salvar pontuação: ", error);
+            }
+        }
+
+        function loadResults() {
+             if (!auth.currentUser) {
+                console.log("Aguardando autenticação para carregar resultados...");
+                setTimeout(loadResults, 1000); // Tenta novamente em 1 segundo
+                return;
+            }
+            const scoresCollection = collection(db, `artifacts/${appId}/public/data/escape_room_scores`);
+            const q = query(scoresCollection);
+
+            onSnapshot(q, (querySnapshot) => {
+                const results = [];
+                querySnapshot.forEach((doc) => {
+                    results.push(doc.data());
+                });
+
+                // Ordena os resultados em memória (mais recente primeiro)
+                results.sort((a, b) => b.timestamp.toMillis() - a.timestamp.toMillis());
+
+                const resultsBody = document.getElementById('results-body');
+                resultsBody.innerHTML = ''; // Limpa a tabela
+                
+                if (results.length === 0) {
+                    resultsBody.innerHTML = '<tr><td colspan="3" class="text-center text-gray-500 py-4">Nenhum resultado ainda. Seja o primeiro a jogar!</td></tr>';
+                } else {
+                    results.forEach(data => {
+                        const date = data.timestamp.toDate();
+                        const formattedDate = `${date.toLocaleDateString('pt-BR')} ${date.toLocaleTimeString('pt-BR')}`;
+                        const row = `<tr>
+                            <td class="font-bold">${data.studentName}</td>
+                            <td class="text-amber-300 font-semibold">${data.score.toFixed(1)}</td>
+                            <td>${formattedDate}</td>
+                        </tr>`;
+                        resultsBody.innerHTML += row;
+                    });
+                }
+            }, (error) => {
+                console.error("Erro ao carregar resultados: ", error);
+                const resultsBody = document.getElementById('results-body');
+                resultsBody.innerHTML = '<tr><td colspan="3" class="text-center text-red-400 py-4">Erro ao carregar os resultados.</td></tr>';
+            });
+        }
+        
+        // Inicia o jogo e carrega os resultados quando a página carrega
+        window.addEventListener('DOMContentLoaded', () => {
+            renderStep();
+            loadResults();
+        });
+    </script>
+</body>
+</html>

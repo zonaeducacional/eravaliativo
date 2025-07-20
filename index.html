@@ -27,6 +27,7 @@
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #4a5568;
+            vertical-align: middle;
         }
         .results-table th {
             background-color: #2d3748;
@@ -36,6 +37,26 @@
         }
         .results-table tr:nth-child(even) {
             background-color: #232c3b;
+        }
+        .admin-input {
+            background-color: #1a202c;
+            border: 1px solid #4a5568;
+            color: white;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            width: 100%;
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
         }
     </style>
 </head>
@@ -52,16 +73,12 @@
         <article id="texto-estudo" class="prose prose-invert lg:prose-xl max-w-none bg-gray-800 p-6 rounded-lg shadow-lg mb-12">
             <h2>Material de Estudo: A Chave para sua Fuga</h2>
             <p>Para escapar dos labirintos do tempo, você precisa entender a época que está deixando para trás e aquela que surge no horizonte. Leia com atenção, pois cada parágrafo pode ser uma pista! As palavras em <strong>negrito</strong> estão explicadas no vocabulário abaixo.</p>
-            
             <h3>1. O Fim da Idade Média e a Crise do Feudalismo</h3>
             <p>O Feudalismo, sistema que marcou a Idade Média, era baseado na terra (o <strong>feudo</strong>) e em relações de <strong>servidão</strong>. O poder era descentralizado, nas mãos dos senhores feudais. No entanto, a partir do século XI, esse sistema começou a entrar em crise por vários motivos. As Cruzadas, expedições militares e religiosas, reabriram antigas rotas comerciais com o Oriente, estimulando o comércio. Cidades, chamadas de <strong>burgos</strong>, começaram a crescer e se tornaram centros de comércio e artesanato. Além disso, uma terrível epidemia, a Peste Negra, dizimou quase metade da população europeia no século XIV. Isso desorganizou a produção nos feudos, levou a revoltas camponesas e enfraqueceu o poder da nobreza, que via sua fonte de riqueza e poder diminuir.</p>
-
             <h3>2. A Ascensão da Burguesia: Uma Nova Força Social</h3>
             <p>Nos <strong>burgos</strong>, surgiu uma nova classe social: a <strong>burguesia</strong>. Formada por comerciantes, banqueiros e artesãos, a burguesia enriquecia através do comércio e das finanças, e não pela posse de terras. Eles valorizavam o lucro, a acumulação de riquezas e a liberdade econômica, ideias que se chocavam com a estrutura rígida e agrária do feudalismo. Para a burguesia, as diferentes moedas, os pedágios e a falta de segurança impostas pelos senhores feudais eram grandes obstáculos para seus negócios.</p>
-
             <h3>3. O Estado Moderno e o Mercantilismo</h3>
             <p>Buscando superar esses obstáculos, a <strong>burguesia</strong> encontrou um aliado poderoso: o Rei. Ao financiar os monarcas com empréstimos, a burguesia ajudou a centralizar o poder, formando os Estados Nacionais Modernos (como Portugal, Espanha, França e Inglaterra). Com um poder centralizado (<strong>Absolutismo</strong>), o Rei unificou moedas, leis, impostos e exércitos, garantindo a segurança para o comércio florescer em todo o reino. Essa aliança deu origem a uma nova política econômica chamada <strong>Mercantilismo</strong>, cujos princípios eram: acumular metais preciosos (metalismo), ter uma balança comercial favorável (exportar mais que importar) e explorar colônias através do <strong>pacto colonial</strong>.</p>
-
             <h3>4. O Renascimento: A Revolução na Cultura e no Pensamento</h3>
             <p>Toda essa transformação econômica e social veio acompanhada de uma revolução cultural: o <strong>Renascimento</strong>. Inspirado na cultura da Grécia e Roma antigas, o Renascimento trocou o <strong>Teocentrismo</strong> medieval (Deus no centro de tudo) pelo <strong>Antropocentrismo</strong> (o ser humano no centro). O Humanismo valorizava a razão, a observação e a capacidade humana. Artistas como Leonardo da Vinci e Michelangelo, muitas vezes financiados por burgueses ricos e pela Igreja (os <strong>mecenas</strong>), criaram obras que celebravam a beleza do corpo humano e do mundo natural, utilizando novas técnicas como a perspectiva. A invenção da prensa de tipos móveis por Gutenberg, por volta de 1450, permitiu que essas novas ideias se espalhassem mais rapidamente.</p>
         </article>
@@ -70,7 +87,7 @@
         <section id="vocabulario" class="bg-gray-800 p-6 rounded-lg shadow-lg mb-12">
             <h2 class="font-medieval text-3xl text-amber-300 mb-4">Vocabulário Essencial</h2>
             <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                <div class="p-2"><dt class="font-bold text-amber-200">Feudo:</dt><dd>Grande propriedade de terra controlada por um senhor feudal, base da economia medieval.</dd></div>
+                 <div class="p-2"><dt class="font-bold text-amber-200">Feudo:</dt><dd>Grande propriedade de terra controlada por um senhor feudal, base da economia medieval.</dd></div>
                 <div class="p-2"><dt class="font-bold text-amber-200">Servidão:</dt><dd>Relação em que o camponês (servo) estava preso à terra e devia obrigações e impostos ao senhor feudal.</dd></div>
                 <div class="p-2"><dt class="font-bold text-amber-200">Burgos:</dt><dd>Cidades medievais que se tornaram centros de comércio e artesanato.</dd></div>
                 <div class="p-2"><dt class="font-bold text-amber-200">Burguesia:</dt><dd>Classe social que surgiu nos burgos, composta por comerciantes, banqueiros e artesãos.</dd></div>
@@ -85,33 +102,57 @@
 
         <!-- Seção 3: Escape Room Interativo -->
         <div id="escape-room" class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-2xl border-2 border-amber-400 min-h-[300px]">
-            <!-- O conteúdo do jogo será renderizado aqui pelo JavaScript -->
         </div>
 
         <!-- Seção 4: Tabela de Resultados -->
         <div id="resultados" class="mt-12 bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h2 class="font-medieval text-3xl text-amber-300 mb-4 text-center">Resultados da Turma</h2>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="font-medieval text-3xl text-amber-300">Resultados da Turma</h2>
+                <div id="admin-controls" class="hidden">
+                    <button id="add-manual-btn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg text-sm mr-2">Adicionar</button>
+                    <button id="logout-btn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg text-sm">Sair</button>
+                </div>
+            </div>
             <div class="overflow-x-auto">
                 <table class="min-w-full results-table">
-                    <thead><tr><th>Aluno(a)</th><th>Pontuação Final</th><th>Data</th></tr></thead>
+                    <thead><tr><th>Aluno(a)</th><th>Pontuação</th><th>Data</th><th id="admin-header" class="hidden">Ações</th></tr></thead>
                     <tbody id="results-body">
                         <tr><td colspan="3" class="text-center text-gray-500 py-4">Carregando resultados...</td></tr>
                     </tbody>
                 </table>
             </div>
+            <div class="text-center mt-6">
+                <button id="show-login-btn" class="text-amber-300 hover:text-amber-400 text-sm">Login do Professor</button>
+            </div>
         </div>
-
     </div>
 
-    <script type="module">
-        // --- IMPORTS ---
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getFirestore, collection, addDoc, onSnapshot, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    <!-- Modal de Login -->
+    <div id="login-modal" class="modal-overlay hidden">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-sm">
+            <h3 class="font-medieval text-2xl text-amber-300 mb-4 text-center">Acesso Restrito</h3>
+            <div class="space-y-4">
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-300">Usuário</label>
+                    <input type="text" id="username" class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-3 text-white focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-300">Senha</label>
+                    <input type="password" id="password" class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-2 px-3 text-white focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                </div>
+                <p id="login-error" class="text-red-400 text-sm h-4"></p>
+                <div class="flex gap-4">
+                    <button id="login-btn" class="w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-lg">Entrar</button>
+                    <button id="cancel-login-btn" class="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        // --- CONFIGURAÇÃO E DADOS DO JOGO ---
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-escape-room';
+    <script>
+        // --- CONFIGURAÇÃO E DADOS ---
+        const apiKey = '$2a$10$6CtPJpqy4GU0j0jRdhjTJ.llBmCKg9UcINOVmbrOqUE740xZgleei';
+        const binId = '687ce975d039d559a1689d2f';
         const PONTOS_POR_ACERTO = 0.2;
         const gameData = {
             'start': {
@@ -134,26 +175,23 @@
             'victory': { title: "Parabéns, você escapou!", isVictory: true, options: [ { text: "Jogar Novamente", next: 'start' } ] }
         };
 
-        // --- VARIÁVEIS GLOBAIS DO JOGO ---
-        let db, auth;
         let currentStepId = 'start';
         let previousStepId = 'start';
         let score = 0;
         let studentName = '';
+        let isAdminLoggedIn = false;
+        let allResults = [];
 
-        // --- FUNÇÕES DO JOGO ---
+        const gameContainer = document.getElementById('escape-room');
+        const resultsBody = document.getElementById('results-body');
+        const loginModal = document.getElementById('login-modal');
+
         function renderStep() {
-            const gameContainer = document.getElementById('escape-room');
-            if (!gameContainer) return;
-
             const stepData = gameData[currentStepId];
             gameContainer.innerHTML = '';
-            
             const contentWrapper = document.createElement('div');
             contentWrapper.className = 'fade-in';
-
             let htmlContent = `<h2 class="font-medieval text-3xl text-amber-300 mb-4 text-center">${stepData.title}</h2>`;
-
             if (stepData.isVictory) {
                 const finalScore = score.toFixed(1);
                 htmlContent += `<p class="text-lg mb-6 text-center">Sua máquina do tempo está consertada! Você provou seu conhecimento.<br><br><strong class='text-2xl text-amber-300'>Sua pontuação final: ${finalScore} / 2.0</strong></p>`;
@@ -163,13 +201,11 @@
                 const reason = failedOption ? failedOption.reason : "Tente pensar de outra forma.";
                 htmlContent += `<p class="text-lg mb-6 text-center text-red-400">${reason}</p>`;
             } else {
-                 htmlContent += `<p class="text-lg mb-6 text-center">${stepData.question || stepData.text}</p>`;
+                htmlContent += `<p class="text-lg mb-6 text-center">${stepData.question || stepData.text}</p>`;
             }
-            
             if (stepData.needsInput) {
                 htmlContent += `<input type="text" id="student-name" placeholder="Digite seu nome completo aqui" class="w-full md:w-3/4 bg-gray-700 border border-gray-600 rounded-lg py-2 px-3 mb-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 block mx-auto">`;
             }
-
             let optionsHtml = '<div class="flex flex-col items-center space-y-4">';
             if (stepData.isFailure) {
                 optionsHtml += `<button data-next="${previousStepId}" class="w-full md:w-3/4 bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-4 rounded-lg shadow-md transition-transform transform hover:scale-105">Tentar novamente</button>`;
@@ -179,75 +215,171 @@
                 });
             }
             optionsHtml += '</div>';
-            htmlContent += optionsHtml;
-
-            contentWrapper.innerHTML = htmlContent;
+            contentWrapper.innerHTML = htmlContent + optionsHtml;
             gameContainer.appendChild(contentWrapper);
         }
 
-        async function saveScore(name, finalScore) {
-            if (!name || !auth.currentUser) return;
+        async function updateJSONBin(data) {
             try {
-                const scoresCollection = collection(db, `artifacts/${appId}/public/data/escape_room_scores`);
-                await addDoc(scoresCollection, { studentName: name, score: parseFloat(finalScore), timestamp: new Date() });
-            } catch (error) { console.error("Erro ao salvar pontuação: ", error); }
-        }
-
-        function loadResults() {
-            if (!auth.currentUser) { setTimeout(loadResults, 1000); return; }
-            const scoresCollection = collection(db, `artifacts/${appId}/public/data/escape_room_scores`);
-            const q = query(scoresCollection);
-
-            onSnapshot(q, (querySnapshot) => {
-                const results = [];
-                querySnapshot.forEach((doc) => results.push(doc.data()));
-                results.sort((a, b) => b.timestamp.toMillis() - a.timestamp.toMillis());
-
-                const resultsBody = document.getElementById('results-body');
-                resultsBody.innerHTML = '';
-                
-                if (results.length === 0) {
-                    resultsBody.innerHTML = '<tr><td colspan="3" class="text-center text-gray-500 py-4">Nenhum resultado ainda. Seja o primeiro a jogar!</td></tr>';
-                } else {
-                    results.forEach(data => {
-                        const date = data.timestamp.toDate();
-                        const formattedDate = `${date.toLocaleDateString('pt-BR')} ${date.toLocaleTimeString('pt-BR')}`;
-                        resultsBody.innerHTML += `<tr><td class="font-bold">${data.studentName}</td><td class="text-amber-300 font-semibold">${data.score.toFixed(1)}</td><td>${formattedDate}</td></tr>`;
-                    });
-                }
-            }, (error) => {
-                console.error("Erro ao carregar resultados: ", error);
-                document.getElementById('results-body').innerHTML = '<tr><td colspan="3" class="text-center text-red-400 py-4">Erro ao carregar os resultados.</td></tr>';
-            });
-        }
-        
-        // --- PONTO DE ENTRADA PRINCIPAL ---
-        window.addEventListener('DOMContentLoaded', async () => {
-            const gameContainer = document.getElementById('escape-room');
-            
-            try {
-                const app = initializeApp(firebaseConfig);
-                db = getFirestore(app);
-                auth = getAuth(app);
-                
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    await signInAnonymously(auth);
-                }
+                const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': apiKey
+                    },
+                    body: JSON.stringify(data)
+                });
+                if (!response.ok) throw new Error('Falha ao atualizar o Bin.');
+                return true;
             } catch (error) {
-                console.error("Falha na inicialização do Firebase:", error);
-                if(gameContainer) {
-                    gameContainer.innerHTML = `<div class="text-center text-red-400 p-4"><h2 class="font-medieval text-3xl">Erro de Conexão</h2><p class="mt-2">Não foi possível iniciar a atividade. Verifique sua conexão e recarregue a página.</p></div>`;
-                }
+                console.error("Erro ao salvar no JSONBin:", error);
+                alert("Ocorreu um erro ao salvar os dados.");
+                return false;
+            }
+        }
+
+        async function loadResultsFromJSONBin() {
+            try {
+                const response = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
+                    method: 'GET',
+                    headers: { 'X-Master-Key': apiKey }
+                });
+                if (response.status === 404) return [];
+                if (!response.ok) throw new Error(`Erro na API: ${response.statusText}`);
+                const data = await response.json();
+                allResults = data.record;
+                displayResults();
+            } catch (error) {
+                console.error("Erro ao carregar do JSONBin:", error);
+                resultsBody.innerHTML = `<tr><td colspan="4" class="text-center text-red-400 py-4">Erro ao carregar resultados.</td></tr>`;
+            }
+        }
+
+        async function saveScore(name, finalScore) {
+            const newScore = { studentName: name, score: parseFloat(finalScore), timestamp: new Date().toISOString() };
+            allResults.push(newScore);
+            const success = await updateJSONBin(allResults);
+            if (success) {
+                displayResults();
+            }
+        }
+
+        function displayResults() {
+            resultsBody.innerHTML = '';
+            if (!allResults || allResults.length === 0) {
+                resultsBody.innerHTML = `<tr><td colspan="${isAdminLoggedIn ? 4 : 3}" class="text-center text-gray-500 py-4">Nenhum resultado ainda.</td></tr>`;
                 return;
             }
+            const sortedResults = [...allResults].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+            sortedResults.forEach(data => {
+                const date = new Date(data.timestamp);
+                const formattedDate = `${date.toLocaleDateString('pt-BR')} ${date.toLocaleTimeString('pt-BR')}`;
+                const row = document.createElement('tr');
+                row.dataset.timestamp = data.timestamp;
+                row.innerHTML = `
+                    <td data-field="studentName">${data.studentName}</td>
+                    <td data-field="score" class="text-amber-300 font-semibold">${parseFloat(data.score).toFixed(1)}</td>
+                    <td>${formattedDate}</td>
+                    ${isAdminLoggedIn ? `
+                    <td class="flex gap-2">
+                        <button class="edit-btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded text-xs">Editar</button>
+                        <button class="delete-btn bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 rounded text-xs">Excluir</button>
+                    </td>` : ''}
+                `;
+                resultsBody.appendChild(row);
+            });
+        }
+
+        function handleAdminLogin() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            if (user === 'professor' && pass === 'j1junior') {
+                isAdminLoggedIn = true;
+                loginModal.classList.add('hidden');
+                document.getElementById('admin-controls').classList.remove('hidden');
+                document.getElementById('admin-header').classList.remove('hidden');
+                document.getElementById('show-login-btn').classList.add('hidden');
+                displayResults();
+            } else {
+                document.getElementById('login-error').textContent = 'Usuário ou senha inválidos.';
+            }
+        }
+
+        function handleAdminLogout() {
+            isAdminLoggedIn = false;
+            document.getElementById('admin-controls').classList.add('hidden');
+            document.getElementById('admin-header').classList.add('hidden');
+            document.getElementById('show-login-btn').classList.remove('hidden');
+            displayResults();
+        }
+
+        function handleEdit(row) {
+            row.querySelectorAll('[data-field]').forEach(cell => {
+                const field = cell.dataset.field;
+                const value = cell.textContent;
+                cell.innerHTML = `<input type="text" class="admin-input" value="${value}" data-original-value="${value}">`;
+            });
+            row.querySelector('.edit-btn').textContent = 'Salvar';
+            row.querySelector('.edit-btn').classList.replace('bg-blue-500', 'bg-green-500');
+            row.querySelector('.edit-btn').classList.replace('hover:bg-blue-600', 'hover:bg-green-600');
+            row.querySelector('.delete-btn').textContent = 'Cancelar';
+            row.querySelector('.delete-btn').classList.replace('bg-red-500', 'bg-gray-500');
+            row.querySelector('.delete-btn').classList.replace('hover:bg-red-600', 'hover:bg-gray-600');
+        }
+
+        async function handleSave(row) {
+            const timestamp = row.dataset.timestamp;
+            const index = allResults.findIndex(r => r.timestamp === timestamp);
+            if (index === -1) return;
+
+            const newName = row.querySelector('[data-field="studentName"] input').value;
+            const newScore = row.querySelector('[data-field="score"] input').value;
+
+            allResults[index].studentName = newName;
+            allResults[index].score = parseFloat(newScore);
+            
+            const success = await updateJSONBin(allResults);
+            if(success) displayResults();
+        }
+        
+        function handleCancelEdit(row) {
+            displayResults(); // Just re-render the whole table to cancel
+        }
+
+        async function handleDelete(row) {
+            if (!confirm('Tem certeza que deseja excluir este resultado?')) return;
+            const timestamp = row.dataset.timestamp;
+            allResults = allResults.filter(r => r.timestamp !== timestamp);
+            const success = await updateJSONBin(allResults);
+            if(success) displayResults();
+        }
+
+        async function handleAddManual() {
+            const name = prompt("Nome do Aluno:");
+            if (!name) return;
+            const scoreStr = prompt("Nota do Aluno (ex: 1.8):");
+            if (!scoreStr) return;
+            const score = parseFloat(scoreStr);
+            if (isNaN(score)) {
+                alert("Nota inválida.");
+                return;
+            }
+            const newScore = { studentName: name, score: score, timestamp: new Date().toISOString() };
+            allResults.push(newScore);
+            const success = await updateJSONBin(allResults);
+            if(success) displayResults();
+        }
+
+
+        // --- PONTO DE ENTRADA PRINCIPAL ---
+        window.addEventListener('DOMContentLoaded', () => {
+            renderStep();
+            loadResultsFromJSONBin();
 
             gameContainer.addEventListener('click', function(e) {
                 if (e.target.tagName !== 'BUTTON') return;
                 const nextStepId = e.target.dataset.next;
                 if (!nextStepId) return;
-
                 if (currentStepId === 'start') {
                     const nameInput = document.getElementById('student-name');
                     const name = nameInput.value.trim();
@@ -266,20 +398,37 @@
                     studentName = name;
                     score = 0;
                 }
-                
                 const points = parseFloat(e.target.dataset.points || 0);
                 score += points;
-
-                if (nextStepId === 'fail_generic') {
-                    previousStepId = currentStepId;
-                }
-
+                if (nextStepId === 'fail_generic') previousStepId = currentStepId;
                 currentStepId = nextStepId;
                 renderStep();
             });
 
-            renderStep();
-            loadResults();
+            document.getElementById('show-login-btn').addEventListener('click', () => loginModal.classList.remove('hidden'));
+            document.getElementById('cancel-login-btn').addEventListener('click', () => loginModal.classList.add('hidden'));
+            document.getElementById('login-btn').addEventListener('click', handleAdminLogin);
+            document.getElementById('logout-btn').addEventListener('click', handleAdminLogout);
+            document.getElementById('add-manual-btn').addEventListener('click', handleAddManual);
+
+            resultsBody.addEventListener('click', function(e) {
+                const row = e.target.closest('tr');
+                if (!row) return;
+
+                if (e.target.classList.contains('edit-btn')) {
+                    if (e.target.textContent === 'Editar') {
+                        handleEdit(row);
+                    } else {
+                        handleSave(row);
+                    }
+                } else if (e.target.classList.contains('delete-btn')) {
+                     if (e.target.textContent === 'Excluir') {
+                        handleDelete(row);
+                    } else {
+                        handleCancelEdit(row);
+                    }
+                }
+            });
         });
     </script>
 </body>
